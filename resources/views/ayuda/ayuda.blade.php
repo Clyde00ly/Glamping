@@ -14,10 +14,10 @@
 </div>
 <br> 
     <video width="640" height="360" controls>
-  <source src="resources/views/ayuda/Instalación del aplicativo Glamping Nube(720P_HD).mp4" type="video/mp4">
+  <source src="resources/views/ayuda/video.mp4" type="video/mp4">
 </video>
 <br>
-    <embed src="resources/views/ayuda/Manual de usuario Glamping Nube.pdf" type="application/pdf" width="100%" height="600px" />
+    <embed src="Manual de usuario Glamping Nube.pdf" type="application/pdf" width="100%" height="600px" />
 @stop
 
 @section('css')
