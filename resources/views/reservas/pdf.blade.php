@@ -97,6 +97,10 @@
                 <td>Descuento</td>
                 <td>{{ $reserva->res_descuento }}</td>
             </tr>
+                        <tr>
+                <td>Metodo de pago</td>
+                <td>{{ $metodo->met_nombre }}</td>
+            </tr>
             <tr>
                 <td>Total</td>
                 <td>{{ $reserva->res_total }}</td>
