@@ -29,7 +29,6 @@ return new class extends Migration
 
             $table->foreign('usu_cedula')->references('id')->on('users');
             $table->foreign('dom_codigo')->references('dom_codigo')->on('domos');
-            $table->foreign('met_codigo')->references('met_codigo')->on('metodos');
             $table->foreign('cli_cedula')->references('id')->on('clientes');
             //$table->foreign('usu_cedula')->references('id')->on('users');
         });
