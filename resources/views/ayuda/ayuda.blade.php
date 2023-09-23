@@ -14,10 +14,10 @@
 </div>
 <br> 
     <video width="640" height="360" controls>
-  <source src="resources/views/ayuda/video.mp4" type="video/mp4">
+  <source src="video.mp4" type="video/mp4">
 </video>
 <br>
-    <embed src="Manual de usuario Glamping Nube.pdf" type="application/pdf" width="100%" height="600px" />
+    <embed src="Manual.pdf" type="application/pdf" width="100%" height="600px" />
 @stop
 
 @section('css')
