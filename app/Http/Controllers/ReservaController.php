@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\reserva;
 use App\Models\User;
+use App\Models\metodo;
 use App\Models\cliente;
 use App\Models\Domo;
 use App\Models\Servicio;
@@ -75,8 +76,9 @@ public function generatePDF($reservaId )
         $clientes = cliente::all();
         $domos = Domo::all();
         $servicios = Servicio::all();
+        $metodos = metodo::all();
 
-        return view('reservas.crear', compact('usuarios','usuarioAutenticado','clientes', 'domos','servicios'));
+        return view('reservas.crear', compact('usuarios','usuarioAutenticado','clientes', 'domos','servicios','metodos'));
 
     }
 
@@ -96,6 +98,7 @@ public function generatePDF($reservaId )
             'usu_cedula'=>'required',
             'cli_cedula'=>'required',
             'dom_codigo'=>'required',
+            'met_codigo'=>'required',
         ]);
 
         $reserva = new Reserva([
@@ -114,6 +117,7 @@ public function generatePDF($reservaId )
         $reserva->usuario()->associate(User::find($request->input('usu_cedula')));
         $reserva->cliente()->associate(Cliente::find($request->input('cli_cedula')));
     $reserva->domo()->associate(Domo::find($request->input('dom_codigo')));
+        $reserva->metodo()->associate(metodo::find($request->input('met_codigo')));
   //  $reserva->servicios()->sync($request->input('ser_codigo'));
   //  $serviciosSeleccionados = $request->input('servicios');
 
@@ -225,8 +229,9 @@ $validator = Validator::make($request->all(), [
     $clientes = Cliente::all();
     $domos = Domo::all();
         $servicios = Servicio::all();
+        $metodos = metodo::all();
 
-        return view('reservas.editar', compact('reserva', 'usuarios','clientes', 'domos','servicios'));
+        return view('reservas.editar', compact('reserva', 'usuarios','clientes', 'domos','servicios','metodos'));
     }
 
     /**
@@ -244,6 +249,7 @@ $validator = Validator::make($request->all(), [
             'usu_cedula'=>'required',
             'cli_cedula'=>'required',
             'dom_codigo'=>'required',
+            'met_codigo'=>'required',
         ]);
         $serviciosSeleccionados = $request->input('serviciosSeleccionados');
         $reserva->servicios()->sync($serviciosSeleccionados);
