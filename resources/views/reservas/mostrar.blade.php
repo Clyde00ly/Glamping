@@ -68,6 +68,11 @@
                         {{ $reserva->res_descuento }}
                     </div>
 
+                                        <div class="form-group">
+                        <strong>Metodo de pago:</strong>
+                        {{ $metodo->met_nombre }}
+                    </div>
+
                     <div class="form-group">
                         <strong>Total:</strong>
                         {{ $reserva->formattedPrice }}
