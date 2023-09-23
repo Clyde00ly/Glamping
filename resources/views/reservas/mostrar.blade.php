@@ -70,7 +70,7 @@
 
                                         <div class="form-group">
                         <strong>Metodo de pago:</strong>
-                        {{ $metodo->met_nombre }}
+                        {{ $reserva->metodo->met_nombre }}
                     </div>
 
                     <div class="form-group">
