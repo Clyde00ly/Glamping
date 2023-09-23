@@ -9,7 +9,7 @@ class reserva extends Model
 {
     use HasFactory;
     protected $fillable=['res_fecha_ini', 'res_fecha_fin', 'res_fecha_registro','res_cantidad_per', 'res_descuento',
-     'res_total','usu_cedula','dom_codigo','cli_cedula'];
+     'res_total','usu_cedula','dom_codigo','cli_cedula','met_codigo'];
      protected $attributes = [
         'res_estado' => 'confirmada', // Valor predeterminado para res_estado
     ];
@@ -31,6 +31,11 @@ class reserva extends Model
     public function domo()
     {
         return $this->belongsTo(Domo::class, 'dom_codigo', 'dom_codigo');
+    }
+
+    public function metodo()
+    {
+        return $this->belongsTo(metodo::class, 'met_codigo', 'met_codigo');
     }
 
     public function servicios()
