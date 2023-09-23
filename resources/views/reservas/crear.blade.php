@@ -111,6 +111,17 @@
 @enderror 
 </div>
     </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+            <label for="met_codigo">Metodo de pago:</label>
+            <select class="form-control" id="met_codigo" name="met_codigo">
+                <option value="">Seleccionar un metodo de pago</option>
+                @foreach($metodos as $metodo)
+                    <option value="{{ $metodo->met_codigo }}">{{ $metodo->met_nombre }}</option>
+                @endforeach
+            </select>
+        </div>
+            </div>
 
     
     <div class="col-xs-12 col-sm-12 col-md-12">
