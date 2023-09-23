@@ -13,11 +13,12 @@
 <h1 id="demoFont">VIDEO DE IMPLEMENTACION Y MANUAL DE USUARIO</h1>
 </div>
 <br> 
-       <div class="container">
-        <iframe src="video.mp4"></iframe>
-    </div>
+<a href="https://youtu.be/nb_5szJEx04?si=R8w3bVmNWr1T7rWH">Ver video</a>
 <br>
-<p>Open a PDF file <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">example</a>.</p>
+    <br> 
+<a href="https://es.scribd.com/document/673036279/Manual">Ver manual</a>
+<br>
+
     @stop
 
 @section('css')
