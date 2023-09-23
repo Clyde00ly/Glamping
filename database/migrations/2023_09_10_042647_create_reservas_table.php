@@ -26,10 +26,12 @@ return new class extends Migration
             $table->unsignedBigInteger('usu_cedula');
             $table->unsignedBigInteger('dom_codigo');
             $table->unsignedBigInteger('cli_cedula');
+            $table->unsignedBigInteger('met_codigo');
 
             $table->foreign('usu_cedula')->references('id')->on('users');
             $table->foreign('dom_codigo')->references('dom_codigo')->on('domos');
             $table->foreign('cli_cedula')->references('id')->on('clientes');
+            $table->foreign('met_codigo')->references('met_codigo')->on('metodos');
             //$table->foreign('usu_cedula')->references('id')->on('users');
         });
     }
