@@ -99,7 +99,7 @@
             </tr>
                         <tr>
                 <td>Metodo de pago</td>
-                <td>{{ $metodo->met_nombre }}</td>
+                <td>{{ $reserva->metodo->met_nombre }}</td>
             </tr>
             <tr>
                 <td>Total</td>
