@@ -13,12 +13,12 @@
 <h1 id="demoFont">VIDEO DE IMPLEMENTACION Y MANUAL DE USUARIO</h1>
 </div>
 <br> 
-    <video width="640" height="360" controls>
-  <source src="video.mp4" type="video/mp4">
-</video>
+       <div class="container">
+        <iframe src="video.mp4"></iframe>
+    </div>
 <br>
-    <embed src="Manual.pdf" type="application/pdf" width="100%" height="600px" />
-@stop
+<p>Open a PDF file <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">example</a>.</p>
+    @stop
 
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
